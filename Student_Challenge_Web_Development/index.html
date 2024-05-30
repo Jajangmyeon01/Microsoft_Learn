@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #message{
+                background-color: aqua;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function getMessage(name){
+                return 'Hello, ' + name + '...'; 
+        }
+            const message = getMessage('Ornella');
+            document.write('<div id="message">' + message + '</div>');
+
+            setTimeout(
+            () => { // anonymous function
+                console.log('Done!');
+            },
+            3000 // 3000 milliseconds (3 seconds)
+                
+        )
+        setTimeout(
+            () => { document.write('...Hello again!')},
+            2000
+        );
+        let currentMoney = 800;
+        let laptopPrice = 1000;
+        let laptopDiscountPrice = laptopPrice - (laptopPrice * .20) //Laptop price at 20 percent off
+
+        if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice){
+            //Condition was true. Code in this block will run.
+            console.log("Getting a new laptop!");
+        }
+        else{
+
+            console.log("Not enough Money!");
+        }
+
+        let firstNumber = 20;
+        let secondNumber = 10
+     // let biggestNumber = firstNumber > secondNumber ? firstNumber: secondNumber;
+        
+        let biggestNumber;
+        if (firstNumber > secondNumber) {
+        biggestNumber = firstNumber;
+        } else {
+        biggestNumber = secondNumber;
+        }
+
+        </script>
+    </body>
+
+</html>
